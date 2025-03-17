@@ -1,0 +1,29 @@
+-record(pomiar, {nazwa_stacji, data_czas, pomiary}).
+
+P1 = #pomiar{nazwa_stacji = "Stacja A",
+             data_czas = {{2025, 3, 17}, {14, 30, 0}},
+             pomiary = [{"PM10", 35}, {"PM2.5", 12}, {"Temperatura", 22}, {"Wilgotnosc", 50}]},
+
+P2 = #pomiar{nazwa_stacji = "Stacja B",
+             data_czas = {{2025, 3, 17}, {15, 0, 0}},
+             pomiary = [{"PM10", 40}, {"PM2.5", 15}, {"Temperatura", 20}, {"Cisnienie", 1015}]},
+
+P3 = #pomiar{nazwa_stacji = "Stacja C",
+             data_czas = {{2025, 3, 17}, {15, 30, 0}},
+             pomiary = [{"PM10", 50}, {"PM2.5", 20}, {"Wilgotnosc", 55}, {"Cisnienie", 1012}]}.
+
+
+ListaPomiarow = [P1, P2, P3].
+
+
+P4 = #pomiar{nazwa_stacji = "Stacja D",
+             data_czas = {{2025, 3, 17}, {16, 0, 0}},
+             pomiary = [{"PM10", 60}, {"PM2.5", 25}, {"Temperatura", 18}, {"Cisnienie", 1020}]}.
+
+
+NowaListaPomiarow = [P4 | ListaPomiarow].
+
+
+NazwaP1 = P1#pomiar.nazwa_stacji.
+
+
