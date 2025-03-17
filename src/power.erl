@@ -1,13 +1,7 @@
-%%%-------------------------------------------------------------------
-%%% @author Admin
-%%% @copyright (C) 2025, <COMPANY>
-%%% @doc
-%%%
-%%% @end
-%%% Created : 17. mar 2025 15:25
-%%%-------------------------------------------------------------------
 -module(power).
--author("Admin").
 
-%% API
--export([]).
+-export([power/2]).
+
+power(Podstawa, Wykladnik) when Wykladnik == 0 -> 1;
+power(Podstawa, Wykladnik) when Wykladnik > 0 ->  Podstawa * power(Podstawa, Wykladnik - 1);
+power(Podstawa, Wykladnik) when Wykladnik < 0 -> 1/power(Podstawa, -Wykladnik).
